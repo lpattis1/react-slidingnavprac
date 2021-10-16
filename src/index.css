@@ -1,13 +1,88 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  font-family: "Montserrat", sans-serif !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(38, 38, 41, 0.726),
+      rgba(0, 0, 0, 0.836)
+    ),
+    url(https://i.pinimg.com/originals/4c/6b/1c/4c6b1cdfd95d9795b292b96baf148d01.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+
+.sliding-menu-closed {
+  background: rgba(0, 0, 0, 0.685);
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  height: 100vh !important;
+  width: 100vw;
+  transform: translateX(200%);
+  transition: 0.8s linear transform;
+}
+
+.sliding-menu-open {
+  transform: translateX(0%);
+}
+
+.side-nav {
+  height: 100vh;
+  width: 30%;
+  background: #1a5e1fa1;
+}
+
+.site-container {
+  position: relative;
+}
+
+.nav-toggler {
+  z-index: 1000;
+}
+
+.side-nav-logo {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+  margin-top: 2rem;
+}
+
+.highlight {
+  font-weight: 600;
+}
+
+.side-logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.side-link-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(20%);
+}
+
+.side-nav-link {
+  text-decoration: none;
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  color: white;
+  font-weight: 300;
+}
+
+.side-nav-link:hover {
+  color: black;
+  transition: 0.3s ease-in-out;
 }
